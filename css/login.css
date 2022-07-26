@@ -1,0 +1,22 @@
+.container {
+  height: 100vh;
+}
+
+.contenedor-login {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login {
+  width: 300px;
+  padding: 50px 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 3px #00000063;
+}
+
+.login h3 {
+  color: gray;
+}

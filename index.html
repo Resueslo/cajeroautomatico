@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cajero Automatico</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/login.css">
+</head>
+<body>
+  <!-- ALERTAS -->
+  <div class="toast-container position-fixed top-0 end-0 p-3 ">
+    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div id="msjAlerta" class="toast-body"></div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="contenedor-login">
+      <div class="login text-center">
+        <img src="./images/logo.png" width="60" alt="">        
+        <h3 class="text-center mb-4">¡Bienvenido!</h3>
+        <form id="formulario" action="">
+          <input id="cliente" class="form-control mb-2" type="text" maxlength="10" placeholder="Número de cliente">
+          <input id="nip" class="form-control mb-4" type="password" maxlength="4" placeholder="Nip">
+
+          <button id="btnEntrar" type="button" class="btn btn-primary w-100">Entrar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./js/login.js"></script>
+</body>
+</html>

@@ -18,6 +18,10 @@ const btnEntrar = document.getElementById('btnEntrar');
 const toastLive = document.getElementById('liveToast');
 const toast = new bootstrap.Toast(toastLive);
 
+// INPUTS
+const inputNumCliente = document.getElementById("cliente");
+const inputNip = document.getElementById("nip");
+
 const validarDatos = (cliente, nip) => {
   if(!cliente) {
     mostarAlerta("Debe ingresar su número de cliente.");
@@ -32,16 +36,14 @@ const validarDatos = (cliente, nip) => {
 };
 
 btnEntrar.addEventListener('click', () => {
-  // event.preventDefault();
-  const numCliente = document.getElementById("cliente").value;
-  const nip = document.getElementById("nip").value;
+  // event.preventDefault();  
 
-  if(validarDatos(numCliente, nip)) {
+  if(validarDatos(inputNumCliente.value, inputNip.value)) {
     // OBTENER CUENTAS DE LOCALSTORAGE
     const cuentasDB = JSON.parse(localStorage.getItem("cuentas"));
 
     let usuario = cuentasDB.find(cuenta => {
-      if(cuenta.numCliente == numCliente && cuenta.nip == nip) {
+      if(cuenta.numCliente == inputNumCliente.value && cuenta.nip == inputNip.value) {
         return cuenta;
       }
     });
@@ -51,10 +53,24 @@ btnEntrar.addEventListener('click', () => {
       localStorage.setItem("usuario", JSON.stringify(usuario));
       window.location = "home.html";
     } else {
-      mostarAlerta("No se encontro el cliente, favor de intentar de nuevo.")
+      mostarAlerta("El número de cliente o el nip es incorrecto, favor de intentar de nuevo.")
     }
   }  
-})
+});
+
+inputNumCliente.addEventListener('keypress', (event) => {
+  return validarNumeros(event);
+});
+
+inputNip.addEventListener('keypress', (event) => {
+  return validarNumeros(event);
+});
+
+const validarNumeros = event => {
+  if(!(event.charCode >= 48 && event.charCode <= 57)) {
+    event.preventDefault();
+  }
+};
 
 
 // MOSTRAR ALERTAS

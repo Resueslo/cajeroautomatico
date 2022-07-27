@@ -1,0 +1,62 @@
+.contenedor-principal {
+    height: 100vh;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.pantalla {
+    background-color: #8181df3b;
+    width: 700px;
+    height: 500px;
+    box-shadow: 0 0 3px #00000063;
+    border-radius: 20px;
+    padding: 30px;
+    position: relative;
+}
+
+.contenedor-img {
+    display: flex;
+    align-items: center;
+}
+
+.nomBanco {
+    color: #848484;
+    margin-left: 10px;
+}
+
+.bienvenido {
+    color: #02c9ff;
+}
+
+.btn-salir {
+    position: absolute;
+    right: 30px;
+    width: 70px;
+    top: 20px;
+}
+
+.btn-regresar {
+    position: absolute;
+    right: 115px;
+    top: 20px;
+}
+
+.contenedor-funcionalida {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 50px;
+}
+
+.cantidad-retirar-depositar,
+.input-trasferencia {
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+/* BOTON HOME */
+.btn-menu-cajero {
+    width: 120px;
+}

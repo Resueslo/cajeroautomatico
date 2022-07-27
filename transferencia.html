@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deposito</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/principal.css">
+</head>
+<body>
+    <div class="contenedor-principal">
+        <div class="pantalla">
+            <button type="button" class="btn btn-primary btn-regresar" id="btnRegresar">Regresar</button>
+            <button type="button" class="btn btn-danger btn-salir" id="btnSalir">Salir</button>
+            <div class="contenedor-img">
+            <img src="./images/logo.png" class="" alt="logo" width="90">
+            <h3 class="nomBanco">Banco de México</h3>
+            </div>
+  
+            <h3 class="bienvenido text-center ml-3">¡Bienvenid@ <span id="nomUsuario"></span>!</h3>         
+            
+
+            <div class="contenedor-funcionalida">
+                <div class="row">
+                    <div class="col-md-12">
+                        <input type="text" name="" id="numeroCliente" class="form-control mb-4 input-trasferencia" maxlength="10" placeholder="Número de cliente a trasferir">
+                    </div>
+                    <div class="col-md-12">
+                        <input type="text" name="" id="cantidadTransferir" class="form-control input-trasferencia" maxlength="3" placeholder="Cantidad a trasferir">
+                    </div>
+        
+                    <div class="col-md-12 text-center mt-3">
+                        <button type="button" id="btnContinuar" class="btn btn-primary btn-menu-cajero mb-4">Continuar</button>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+
+    <!-- ALERTAS -->
+    <div class="toast-container position-fixed top-0 end-0 p-3 ">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div id="msjAlerta" class="toast-body"></div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalExito" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <h5>Usted transfirió  la cantidad de: $<span id="cantidadTrasferencia"></span> </h5>
+                <h5>Saldo actual: $<span id="saldoActual"></span> </h5>
+
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal" id="btnSalirModal">Salir</button>
+            <a href="home.html" class="btn btn-primary">Realizar otra acción</a>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/principal.js"></script>
+    <script src="./js/trasferencia.js"></script>
+</body>
+</html>

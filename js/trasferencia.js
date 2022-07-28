@@ -51,9 +51,9 @@ const validarTranserencia = () => {
 };
 
 const realizarTrasferencia = () => {
-    const cuentasDB = JSON.parse(localStorage.getItem("cuentas"));
+    let cuentasDB = JSON.parse(localStorage.getItem("cuentas"));
 
-    let indice = cuentasDB.findIndex(cuenta => cuenta.numCliente == inputNumCliente.value);
+    const indice = cuentasDB.findIndex(cuenta => cuenta.numCliente == inputNumCliente.value);
 
     if(indice >= 0) {
         cuentasDB[indice].saldo = parseInt(cuentasDB[indice].saldo) + parseInt(inputCantidad.value);

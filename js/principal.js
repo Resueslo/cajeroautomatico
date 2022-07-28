@@ -8,7 +8,7 @@ const montoMaximo = 990;
 const montoMinimo = 10;
 
 
-const usuario = JSON.parse(localStorage.getItem("usuario"));
+let usuario = JSON.parse(localStorage.getItem("usuario"));
 
 // SI NO HAY USUARIO LOGEADO
 if(!usuario) {
@@ -23,7 +23,7 @@ const montoMaximoDepositar = montoMaximo - usuario.saldo;
 
 
 const actulizarSaldoUsuario = (nuevoSaldo, numCliente ) => {
-  const cuentasDB = JSON.parse(localStorage.getItem("cuentas"));
+  let cuentasDB = JSON.parse(localStorage.getItem("cuentas"));
 
   let indice = cuentasDB.findIndex(cuenta => cuenta.numCliente == numCliente);
 
